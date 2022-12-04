@@ -42,3 +42,12 @@ let menu: {
 // destructured
 
 let { courses: extractCourses } = menu
+
+
+// we can replace variables that have any 'undefined' any type
+// to a concrete type that is specified by an annotation.
+async function getFruitList() {
+    const response = await fetch("https://127.0.0.1/fruitList")
+    const fruitList:string[] = await response.json();
+    return fruitList;
+}
